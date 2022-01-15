@@ -11,3 +11,165 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  font-family: "Verdana", cursive, sans-serif;
+  color: #ffffff;
+}
+
+body {
+  background: rgb(116,40,186);
+  background: radial-gradient(circle, rgba(116,40,186,1) 0%, rgba(63,1,119,0.9920343137254902) 47%, rgba(0,0,0,1) 96%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  background-color: #481cc4;
+  width: 450px;
+  min-height: 200px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 120px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.score-section {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.question-section {
+  width: 100%;
+  position: relative;
+}
+
+.question-count {
+  margin-bottom: 20px;
+}
+
+.question-count span {
+  font-size: 28px;
+}
+
+.question-text {
+  margin-bottom: 12px;
+}
+
+.timer-text {
+  background: rgb(230, 153, 12);
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 5px solid rgb(255, 189, 67);
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #234668;
+}
+
+.correct {
+  background-color: #2f922f;
+}
+
+.incorrect {
+  background-color: #ff3333;
+}
+
+button:hover {
+  background-color: #555e7d;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+/* HEADER/FOOTER SECTION */
+
+.main-header {
+  margin-top: -150px;
+  margin-bottom: 50px;
+}
+
+.main-header h1{
+  color: White;
+  text-align: center;
+}
+
+.main-footer {
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+
+}
+
+.main-footer p{
+  color: #f58b00ff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.main-footer a :hover{
+  color: rgb(221, 194, 159);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.main-icons{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-icons p svg {
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.main-icons p svg path {
+  text-align: center;
+  color: #f58b00ff;
+}
