@@ -7,7 +7,7 @@ function Footer() {
     return (
         <IconContext.Provider value={{ size: '1.8rem' }} >
             <div className="main-footer">
-                <p>This app has been built for assigment</p>
+                <p>This app has been built for in ReactJS and some additional components</p>
                 <div className='main-icons'>
                     <a href="https://github.com/mcpavao">
                         <p><FaGithub/></p>

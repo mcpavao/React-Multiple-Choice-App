@@ -24,6 +24,7 @@ body {
 * {
   font-family: "Verdana", cursive, sans-serif;
   color: #ffffff;
+  cursor: pointer;
 }
 
 body {
@@ -33,18 +34,19 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  cursor: pointer;
 }
 
 .app {
   background-color: #481cc4;
-  width: 450px;
-  min-height: 200px;
+  width: 740px;
+  min-height: 270px;
   height: min-content;
   border-radius: 15px;
   padding: 120px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
-  display: flex;
-  justify-content: space-evenly;
+  /*display: flex;*/
+  /*justify-content: space-evenly;*/
   cursor: pointer;
 }
 
@@ -57,7 +59,11 @@ body {
 /* QUESTION/TIMER/LEFT SECTION */
 .question-section {
   width: 100%;
+  height: 200px;
+  margin-top: auto;
   position: relative;
+  margin-left: -60px;;
+  margin-top: -100px;
 }
 
 .question-count {
@@ -84,10 +90,12 @@ body {
 
 /* ANSWERS/RIGHT SECTION */
 .answer-section {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: -65px;
+
 }
 
 button {
@@ -101,6 +109,8 @@ button {
   justify-content: flex-start;
   align-items: center;
   border: 5px solid #234668;
+  margin-bottom: 10px;
+  
 }
 
 .correct {
@@ -126,13 +136,14 @@ button svg {
 /* HEADER/FOOTER SECTION */
 
 .main-header {
-  margin-top: -150px;
+  margin-top: -130px;
   margin-bottom: 50px;
 }
 
 .main-header h1{
   color: White;
   text-align: center;
+  margin-top: -10px;
 }
 
 .main-footer {

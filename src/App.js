@@ -4,6 +4,7 @@ export default function App() {
 	const questions = [
 		{
 			questionText: 'How many goals has Pelé scored in his career?',
+			photoImage: '',
 			answerOptions: [
 				{ answerText: '1050 goals', isCorrect: false },
 				{ answerText: '1537 goals', isCorrect: false },
@@ -130,7 +131,8 @@ export default function App() {
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOptions) => 
-            <button onClick={() => handleAnswerButtonClick(answerOptions.isCorrect)}>{answerOptions.answerText}</button>)}
+            			<button onClick={() => handleAnswerButtonClick(answerOptions.isCorrect)}>
+						{answerOptions.answerText}</button>)}
 					</div>
 				</>
 			)}
