@@ -102,7 +102,7 @@ body {
 .answer-section {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 24em);
+  grid-template-columns: repeat(2, 19em);
   gap: 0px;;
   height: 120px;
   margin-top: 250px;
@@ -163,7 +163,7 @@ button svg {
   text-align: center;
   position: fixed;
   width: 100%;
-
+  padding-top: 10px;
 }
 
 .main-footer p{
@@ -193,4 +193,9 @@ button svg {
 .main-icons p svg path {
   text-align: center;
   color: #f58b00ff;
+}
+
+.language-select {
+  margin-right: -100px;
+  margin-top: -95px;
 }
