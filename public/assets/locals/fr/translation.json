@@ -1,0 +1,7 @@
+{
+  "language": "Langue",
+  "welcome_message": "Teste tes connaissances!",
+  "question_number": "Question",
+  "question_1": "Combien de buts a totalisé Pelé dans tout sa carrière?",
+  "footer_message": "Cette application a été créée en utilisant React et quelques composants additionnels"
+}

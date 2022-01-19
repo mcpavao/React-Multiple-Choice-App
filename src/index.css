@@ -35,35 +35,45 @@ body {
   align-items: center;
   min-height: 100vh;
   cursor: pointer;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap;
+  margin-top: -60px;
 }
 
 .app {
   background-color: #481cc4;
-  width: 740px;
-  min-height: 270px;
+  width: 640px;
+  min-height: 370px;
   height: min-content;
   border-radius: 15px;
-  padding: 120px;
+  padding: 30px 50px 20px 110px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
-  /*display: flex;*/
-  /*justify-content: space-evenly;*/
+  display: flex;
   cursor: pointer;
+  margin-top: 50px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .score-section {
   display: flex;
   font-size: 24px;
   align-items: center;
+  margin-right: 78px;
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
 .question-section {
   width: 100%;
-  height: 200px;
-  margin-top: auto;
-  position: relative;
-  margin-left: -60px;;
-  margin-top: -100px;
+  height: 1px;
+  margin-top: -12px;
+  margin-left: -150px;
+  margin-bottom: 20px;
+  
 }
 
 .question-count {
@@ -90,12 +100,13 @@ body {
 
 /* ANSWERS/RIGHT SECTION */
 .answer-section {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: -65px;
-
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 24em);
+  gap: 0px;;
+  height: 120px;
+  margin-top: 250px;
+  margin-right: 190px;
 }
 
 button {
@@ -105,12 +116,12 @@ button {
   background-color: #252d4a;
   border-radius: 15px;
   display: flex;
-  padding: 5px;
-  justify-content: flex-start;
+  padding: 10px;
+  justify-content: space-between;
   align-items: center;
   border: 5px solid #234668;
   margin-bottom: 10px;
-  
+  padding-left: 10px;
 }
 
 .correct {
@@ -136,14 +147,13 @@ button svg {
 /* HEADER/FOOTER SECTION */
 
 .main-header {
-  margin-top: -130px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .main-header h1{
   color: White;
   text-align: center;
-  margin-top: -10px;
+  margin-top: 0px;
 }
 
 .main-footer {

@@ -1,0 +1,7 @@
+{
+  "language": "Taal",
+  "welcome_message": "Test je kennis!",
+  "question_number": "Ondervragen",
+  "question_1": "Hoeveel doelpunten maakte Pelé in zijn hele carrière?",
+  "footer_message": "Deze app is gebouwd met React en enkele aanvullende componenten"
+}

@@ -1,10 +1,32 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 
 export default function App() {
+
+	const languages = [
+		{
+			code: 'fr',
+			name: 'Français',
+			country_code: 'fr'
+		},
+		{
+			code: 'en',
+			name: 'English',
+			country_code: 'gb'
+		},
+		{
+			code: 'pt',
+			name: 'Portuguese',
+			country_code: 'pt'
+		},
+	]
+
+	const { t } = useTranslation()
+
 	const questions = [
 		{
 			questionText: 'How many goals has Pelé scored in his career?',
-			photoImage: '',
 			answerOptions: [
 				{ answerText: '1050 goals', isCorrect: false },
 				{ answerText: '1537 goals', isCorrect: false },
@@ -40,57 +62,66 @@ export default function App() {
 			],
 		},
 		{
-			questionText: 'What year was the World Cup in the USA?',
+			questionText: 'Which continent has the highest number of countries?',
 			answerOptions: [
-				{ answerText: '1990', isCorrect: false },
-				{ answerText: '1994', isCorrect: true },
-				{ answerText: '1998', isCorrect: false },
-				{ answerText: '2014', isCorrect: false },
+				{ answerText: 'Asia', isCorrect: false },
+				{ answerText: 'Europe', isCorrect: false },
+				{ answerText: 'North America', isCorrect: false },
+				{ answerText: 'Africa', isCorrect: true },
 			],
 		},
 		{
-			questionText: 'What year was the World Cup in the USA?',
+			questionText: 'Which one is the largest tropical rain forest in the world?',
 			answerOptions: [
-				{ answerText: '1990', isCorrect: false },
-				{ answerText: '1994', isCorrect: true },
-				{ answerText: '1998', isCorrect: false },
-				{ answerText: '2014', isCorrect: false },
+				{ answerText: 'Amazonia', isCorrect: true },
+				{ answerText: 'Bosawas', isCorrect: false },
+				{ answerText: 'Southeast Asian Rain Forest', isCorrect: false },
+				{ answerText: 'Daintree', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'What year was the World Cup in the USA?',
+			questionText: 'Which one is the longest continental mountain range in the world?',
 			answerOptions: [
-				{ answerText: '1990', isCorrect: false },
-				{ answerText: '1994', isCorrect: true },
-				{ answerText: '1998', isCorrect: false },
-				{ answerText: '2014', isCorrect: false },
+				{ answerText: 'Himalaya', isCorrect: false },
+				{ answerText: 'Andes', isCorrect: true },
+				{ answerText: 'Rocky Mountains', isCorrect: false },
+				{ answerText: 'Ural Mountains', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'What year was the World Cup in the USA?',
+			questionText: 'Which one is the smallest ocean in the World?',
 			answerOptions: [
-				{ answerText: '1990', isCorrect: false },
-				{ answerText: '1994', isCorrect: true },
-				{ answerText: '1998', isCorrect: false },
-				{ answerText: '2014', isCorrect: false },
+				{ answerText: 'Indian', isCorrect: false },
+				{ answerText: 'Pacific', isCorrect: false },
+				{ answerText: 'Atantic', isCorrect: false },
+				{ answerText: 'Artic', isCorrect: true },
 			],
 		},
 		{
-			questionText: 'What year was the World Cup in the USA?',
+			questionText: 'Which country gifted the "Statue of Liberty" to USA in 1886?',
 			answerOptions: [
-				{ answerText: '1990', isCorrect: false },
-				{ answerText: '1994', isCorrect: true },
-				{ answerText: '1998', isCorrect: false },
-				{ answerText: '2014', isCorrect: false },
+				{ answerText: 'France', isCorrect: true },
+				{ answerText: 'Canada', isCorrect: false },
+				{ answerText: 'England', isCorrect: false },
+				{ answerText: 'Fiji Island', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'What year was the World Cup in the USA?',
+			questionText: 'In which country, white elephant is found',
 			answerOptions: [
-				{ answerText: '1990', isCorrect: false },
-				{ answerText: '1994', isCorrect: true },
-				{ answerText: '1998', isCorrect: false },
-				{ answerText: '2014', isCorrect: false },
+				{ answerText: 'India', isCorrect: false },
+				{ answerText: 'Sri Lanka', isCorrect: false },
+				{ answerText: 'Thailand', isCorrect: true },
+				{ answerText: 'Malaysia', isCorrect: false },
+			],
+		},
+		{
+			questionText: 'Which F1 Driver has most titles?',
+			answerOptions: [
+				{ answerText: 'Michael Schumacher', isCorrect: true },
+				{ answerText: 'Ayrton Senna', isCorrect: false },
+				{ answerText: 'Lewis Hamilton', isCorrect: true },
+				{ answerText: 'Alan Prost', isCorrect: false },
 			],
 		},
 	];
@@ -103,13 +134,14 @@ export default function App() {
 
   const handleAnswerButtonClick = (isCorrect) => {
     if(isCorrect === true) {
-      setScore(score + 1);
+      setScore(score + 1); 
     }
 
     const nextQuestion = currentQuestion + 1;
     if(nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
-    } else {
+	} 
+	else {
       setShowScore(true);
     }
     
@@ -117,17 +149,18 @@ export default function App() {
 
 	return (
 		<div className='app'>
-			{/* HINT: replace "false" with logic to display the 
-      score when the user has answered all the questions */}
 			{showScore ? (
 				<div className='score-section'>You scored {score} out of {questions.length}</div>
 			) : (
 				<>
 					<div className='question-section'>
 						<div className='question-count'>
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
+							<span>{t('question_number')} {currentQuestion + 1}</span>/{questions.length}
 						</div>
 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
+
+						{/* To create the current image that correspond the current question*/}
+						<div className='current-image'></div>
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOptions) => 
